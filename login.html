@@ -336,9 +336,13 @@
 					color: inherit;
 					text-decoration: none;
 				}
+				body > header > ul > li:hover .drop{
+					display: inline-block;
+				}
 				body > header > ul > li{
 					font-size: 3vh;
 					padding-right: 2em;
+					position: relative;
 				}
 				body > header{
 					background-color: #114a8a;
@@ -350,6 +354,49 @@
 				body > header.top{
 					background-color: transparent;
 					color: #114a8a;
+				}
+			}
+			.pdrop{
+				position: relative;
+			}
+			.top .drop{
+				color: #114a8a;
+				background-color: transparent;
+			}
+			.drop{
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 130%;
+				list-style: none;
+				color: white;
+				background-color: #114a8a;
+				animation: mothafuckanimation .5s;
+				overflow: hidden;
+				z-index: 2;
+				padding-left: 0;
+			}
+			@keyframes mothafuckanimation{
+				from{transform: translateY(-1em);opacity: 0}
+				to{transform: translateY(0);opacity: 1}
+			}
+			.drop li{
+				padding-left: 5px;
+				color: inherit;
+				width: 100%;
+			}
+			.drop a{
+				color: inherit;
+				text-decoration: none;
+			}
+			.drop li:hover{
+				background-color: white;
+				color: #114a8a;
+			}
+			@media(min-width: 700px){
+				.pdrop:hover .drop{
+					display: block;
 				}
 			}
 	</style>
@@ -373,6 +420,11 @@
 				<a class="innerLink" href="http://evolvetechdev.com/index.html#servicios">
 					Servicios
 				</a>
+				<ul class="drop">
+					<li><a href="Tienda-virtual.html">Tienda Virtual</a></li>
+					<li><a href="Web-corporativa.html">Web Corporativa</a></li>
+					<li><a href="Personalizado.html">Personalizado</a></li>
+				</ul>
 			</li>
 			<li>
 				<a class="innerLink" href="http://evolvetechdev.com/index.html#como">
@@ -460,7 +512,7 @@
 	<script>
 		//525px
 		function h() {
-			let scaleFactor = (window.innerHeight / 525)*0.8
+			let scaleFactor = (window.innerHeight / 525)*0.9
 			//let res = `scale(${height}) translateX(${(height*525)/2})`
 			let res = `scale(${scaleFactor})`,
 				left= Math.max((525*(scaleFactor-1)),0)/2+'px'
