@@ -1,0 +1,66 @@
+/*
+    css optional source file for j.js
+    Copyright (C) <year> <name of author>
+
+    This program is free software; you can redistribute it and/or modify it under
+    the terms of the GNU General Public License as published by the Free Software Foundation;
+    either version 2 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with this program;
+    if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+    MA 02111-1307 USA
+*/
+.j-animate{
+	opacity: 0;
+	transition-duration: 0;
+}
+.j-animated{
+	transition-duration: 1s;
+	opacity: 1;
+	animation-duration: 1s;
+	animation-name: bounceInLeft;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+}
+.j-animated.j-right{
+	animation-name: bounceInRight;
+}
+@keyframes fadeIn{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+.j-animated.org-left{
+	animation-duration: 1s;
+	animation-name: cardLeft;
+}
+.j-animated.org-right{
+	animation-duration: 1s;
+	animation-name: cardRight;
+}
+@keyframes bounceInLeft {
+	0% {opacity: 0;transform: translateX(-100vw);}
+	60% {opacity: 1;transform: translateX(25px);}
+	75% {transform: translateX(-10px);}
+	90% {transform: translateX(5px);}
+	to {transform: none;}
+}
+@keyframes bounceInRight {
+	from {opacity: 0;transform: translateX(100vw);}
+	60% {opacity: 1;transform: translateX(-25px);}
+	75% {transform: translateX(10px);}
+	90% {transform: translateX(-5px);}
+	to {transform: none;}
+}
+
+@keyframes cardLeft {
+	from{left: 35vw}
+	to{left: 2.5vw}
+}
+@keyframes cardRight {
+	from{transform: translateX(-32.5vw);}
+	to{transform: none;}
+}

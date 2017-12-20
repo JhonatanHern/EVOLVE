@@ -1,0 +1,108 @@
+/*
+		<div id="ideac">
+			<img src="" id="bg">
+			<img src="" id="yll">
+		</div>
+*/
+#idea{
+	height: auto;/*
+	background-image: url('../croc/t.jpg');*/
+}
+#idea h2,#idea h3{
+	margin-top: .5em;
+	margin-bottom: 0;
+	text-align: center;
+}
+#idea h3{
+	font-size: 1.6em;
+}
+#idea p{
+	width: 80vw;
+	padding-left: 10vw;
+	padding-top: 2vh;
+	padding-bottom: 3vh;
+	text-align: justify;
+	font-size: 1.2em;
+}
+@media(max-width:699px){/*little */
+	#idea h2{
+		font-size: 2em!important;
+	}
+	#ideac{
+		position: relative;
+		width: 100%;
+	}
+	#idea ul{
+		padding-left: 0;
+	}
+	#idea ul li{
+		background: url( '../i2/qw.png' ) top left no-repeat; 
+		background-size: 1em;
+		background-position: 1px;
+		padding-left: 30px;
+		list-style-type: none;
+		padding-right: 1em;
+	}
+}
+@media(min-width:700px){/*big*/
+	#idea{
+		padding-bottom: 0em;
+	}
+	#idea h2{
+		font-size: 2em;
+		text-shadow: 5px 5px 10px silver;
+	}
+	#ideac{
+		position: relative;
+		width: 70%;
+		margin-left: 15%;
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	#idea p{
+		width: 34%;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		padding-top: 2vh;
+		padding-bottom: 3vh;
+		text-align: justify;
+		font-size: 1.2em;
+		display: inline-block;
+	}
+	#idea ul{
+		display: none;
+	}
+}
+#bg{
+	width: 100%;
+}
+#party{
+	position: absolute;
+	top: 0%;
+	left: 46%;
+	width: 60%;
+	height: 50%;
+	animation-name: oscilate2;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+#yll{
+	position: absolute;
+	top: 20%;
+	left: 62%;
+	width: 28%;
+	height: 37%;
+	animation-name: oscilate;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+@keyframes oscilate{
+	0%{transform: translateY(0px)}
+	50%{transform: translateY(-10px)}
+	100%{transform: translateY(0px)}
+}
+@keyframes oscilate2{
+	0%{transform: translateY(0px) scale(1)}
+	50%{transform: translateY(-10px) scale(1.2)}
+	100%{transform: translateY(0px) scale(1)}
+}

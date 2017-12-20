@@ -1,0 +1,11 @@
+#scarousel{
+	display: flex;
+	flex-wrap: nowrap;
+}
+@media(max-width:699px){/*little */
+	#scarousel div{
+		width: 100vw;
+	}
+}
+@media(min-width:700px){/*big*/
+}
